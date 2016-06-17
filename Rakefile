@@ -14,15 +14,11 @@ task :os_x_10_9_chrome_45 do
   run_tests('OS X 10.9', 'chrome', '45', 'junit_reports/os_x_10_9_chrome_45')
 end
 
-task :windows_xp_firefox_39 do
-  run_tests('Windows XP', 'firefox', '39', 'junit_reports/windows_xp_firefox_39')
-end
 
 multitask :test_sauce => [
     :windows_8_1_chrome_43,
     :windows_7_firefox_40,
-    :os_x_10_9_chrome_45,
-    :windows_xp_firefox_39
+    :os_x_10_9_chrome_45
   ] do
     puts 'Running automation'
 end

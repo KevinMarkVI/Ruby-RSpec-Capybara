@@ -3,6 +3,7 @@ require "capybara/rspec"
 require "capybara"
 require "rspec"
 require "json"
+require "eyes_selenium"
 
 Capybara.register_driver :selenium do | app|
   capabilities = {
